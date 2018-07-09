@@ -107,11 +107,3 @@ body {
 	background: #408080;
 }
 
-
-
-.more {
-	display: block;
-	clear: both;
-	border: 1px solid black;
-	z-index: 10000;
-}

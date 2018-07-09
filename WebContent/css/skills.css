@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon|Jua|Sunflower:300')
+	;
+
+
+a:hover {
+	opacity: 0.7;
+}
+
+html, body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+
+body{
+	background-color: #75ffff !important;
+}
+
+* {
+	font-family: 'Jua', sans-serif;
+}
+
+#header-nav {
+	width: 100%;
+	padding-top: 20px;
+	padding-left: 40.5%;
+	position: absolute;
+	color: white;
+	font-size: 18px;
+	z-index: 5000;
+}
+
+#header-nav>li {
+	display: inline;
+}
+
+.skills_container{
+	position:relative;
+	top:40%;
+	border:1px solid black;
+}
+
+
+
+
+
+
