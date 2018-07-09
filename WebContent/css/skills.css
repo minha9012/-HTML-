@@ -38,13 +38,19 @@ body{
 	display: inline;
 }
 
+#header-nav>li>a{
+	text-decoration: none !important;
+	color:white !important;
+}
 .skills_container{
 	position:relative;
 	top:40%;
-	border:1px solid black;
 }
 
-
+.list-group{
+	width:60%;
+	margin:0 auto;
+}
 
 
 
