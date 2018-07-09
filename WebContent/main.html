@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>MINHA</title>
+
+<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="js/swiper.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/prefixfree.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+	<header id="header-nav">
+		<li><a href="main.html">HOME</a></li>
+		<li>/</li>
+		<li><a href="about.html">ABOUT</a></li>
+		<li>/</li>
+		<li><a href="skills.html">SKILLS</a></li>
+		<li>/</li>
+		<li><a href="../webpage/main1.html">MOVIE</a></li>
+		<li>/</li>
+		<li><a href="contact.html">CONTACT</a></li>
+	</header>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" id="scene1">
+				<h1>안</h1>
+				<h1>녕</h1>
+				<h1>!</h1>
+				<h1>나</h1>
+				<h1>는</h1>
+				<h1>민</h1>
+				<h1>하</h1>
+				<h1>야</h1>
+				<h1>!</h1>
+			</div>
+			<div class="swiper-slide"
+				ondblclick="javascript:location.href='about.html'" id="scene2">
+				<h1>좋</h1>
+				<h1>아</h1>
+				<h1>하</h1>
+				<h1>는</h1>
+				<h1>것</h1>
+				<p></p>
+			</div>
+
+			<div class="swiper-slide"
+				ondblclick="javascript:location.href='skills.html'" id="scene3">
+				<h1>할</h1>
+				<h1>수</h1>
+				<h1>있</h1>
+				<h1>는</h1>
+				<h1>것</h1>
+				<p></p>
+			</div>
+
+			<div class="swiper-slide"
+				ondblclick="javascript:location.href='../webpage/main1.html'"
+				id="scene4">
+				<h1>영</h1>
+				<h1>화</h1>
+				<h1>보</h1>
+				<h1>러</h1>
+				<h1>갈</h1>
+				<h1>래</h1>
+				<h1>?</h1>
+				<p></p>
+			</div>
+
+			<div class="swiper-slide"
+				ondblclick="javascript:location.href='contact.html'" id="scene5">
+				<h1>CONTACT ME</h1>
+				<p></p>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination : {
+				el : '.swiper-pagination',
+				clickable : true,
+			},
+		});
+	</script>
+</body>
+</html>

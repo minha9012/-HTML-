@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon|Jua|Sunflower:300')
+	;
+
+a {
+	text-decoration: none !important;
+	color: white !important;
+}
+
+a:hover {
+	opacity: 0.7;
+}
+
+html, body {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	background: #eee;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	font-family: 'Jua', sans-serif;
+}
+#header-nav {
+	width: 100%;
+	padding-top: 20px;
+	padding-left: 40.5%;
+	position: absolute;
+	color: white;
+	font-size: 18px;
+	z-index: 5000;
+}
+
+#header-nav>li {
+	display: inline;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide>h1 {
+	letter-spacing: -3px;
+	font-size: 120px;
+	color: white;
+}
+
+.swiper-slide>h1:hover {
+	font-family: 'Black Han Sans';
+}
+
+.swiper-pagination {
+	height: 35%;
+}
+
+.swiper-pagination-bullet {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+	color: #fff;
+	background: white;
+}
+
+#scene1 {
+	background: #ffc300;
+}
+
+#scene2 {
+	background: pink;
+}
+
+#scene3 {
+	background: #75ffff;
+}
+
+#scene5 {
+	background: #afabab;
+}
+
+#scene4 {
+	background: #408080;
+}
+
+
+
+.more {
+	display: block;
+	clear: both;
+	border: 1px solid black;
+	z-index: 10000;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>MINHA</title>
+
+<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+<link rel="stylesheet" type="text/css" href="css/about.css" />
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="js/swiper.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/prefixfree.min.js"></script>
+<script type="text/javascript" src="js/about.js"></script>
+<script lang="javascript">
+	var hd;
+	var pos = 0;
+
+	var ims = [ 'img/love/gameofthrones.png', 'img/love/android.png',
+			'img/love/inception.png', 'img/love/studioghibli.png',
+			'img/love/travel.png', 'img/love/seafood.png',
+			'img/love/bigbangtheory.png' ];
+
+	var ment = [ 'I LOVE TRAVEL', 'I LOVE SEAFOOD', 'I LOVE BIG BANG THEORY',
+			'I LOVE GAME OF THRONES', 'I LOVE ANDROID', 'I LOVE INCEPTION',
+			'I LOVE STUDIO GHIBLI' ];
+
+	var inputNum = 0;
+	var workImg = [ 'img/hand1.png', 'img/hand2.png', 'img/hand3.png',
+			'img/hand4.png', 'img/hand5.png' ];
+	var workMent = [ '집중합니다. 고도의 집중을 통해 업무효율성을 극대화 하고 불필요한 근로를 발생시키지 않습니다.',
+			'빠릅니다. 다양한 방법을 활용해 최소한의 시간으로 결과를 창출해냅니다.',
+			'정확합니다. 단순히 빠르기만 한 것이 아니라 정확하게 업무를 해낼 수 있습니다.',
+			'창의적입니다. 남들이 생각해내지 못한 뛰어난 아이디어를 가지고 있습니다.',
+			'성실합니다. 할 땐 하고 쉴 땐 쉬는 타입입니다. 한 가지 업무를 꾸준히 성실하게 진행할 수 있습니다.' ];
+	var workTitle = [ 'FOCUS', 'SPEED', 'ACCURACY', 'CREATIVITY', 'DILIGENCE' ];
+	function workMove(flg) {
+
+		pos += flg;
+		if (pos >= workImg.length)
+			pos = 0;
+		else if (pos < 0)
+			pos = workImg.length - 1;
+
+		var idp = pos;
+
+		var a = document.getElementById("img_work");
+		a.src = workImg[idp];
+
+		document.getElementById("work_ment_content").innerText = workMent[idp];
+		document.getElementById("ment_title").innerText = workTitle[idp];
+
+		idp++;
+
+		if (inputNum >= workImg.length)
+			inputNum = 0;
+		else if (inputNum < 0)
+			inputNum = workImg.length - 1;
+	};
+
+	function fncMove(flg) {
+		clearTimeout(hd);
+
+		pos += flg;
+		if (pos >= ims.length)
+			pos = 0;
+		else if (pos < 0)
+			pos = ims.length - 1;
+
+		var idp = pos;
+		for (var i = 0; i < 7; i++) {
+			var a = document.getElementById('im' + i);
+			a.src = ims[idp];
+			$("#ic4").animate({
+				"opacity" : "1"
+			});
+			$("#ic4").animate({
+				"opacity" : "0.7"
+			});
+
+			document.getElementById("love_ment").innerText = ment[idp];
+
+			idp++;
+			if (idp >= ims.length)
+				idp = 0;
+			else if (idp < 0)
+				idp = ims.length - 1;
+		}
+
+		hd = setTimeout('fncMove(-1)', 3000);
+	}
+
+	window.onload = function() {
+		$(".about_wrapper").fadaIn(500);
+
+		$("#ic4").animate({
+			"opacity" : "1"
+		});
+		$("#ic4").animate({
+			"opacity" : "0.7"
+		});
+		hd = setTimeout('fncMove(-1)');
+	}
+</script>
+</head>
+
+<body>
+	<header id="header-nav">
+		<li><a href="main.html">HOME</a></li>
+		<li>/</li>
+		<li><a href="about.html">ABOUT</a></li>
+		<li>/</li>
+		<li><a href="skills.html">SKILLS</a></li>
+		<li>/</li>
+		<li><a href="../webpage/main1.html">MOVIE</a></li>
+		<li>/</li>
+		<li><a href="contact.html">CONTACT</a></li>
+	</header>
+	<div class="about_container">
+		<div class="about_wrapper">
+			<a href="#"><div class="about_div" id="love"></div></a> <a href="#"><div
+					class="about_div" id="core"></div></a> <a href="#"><div
+					class="about_div" id="work"></div></a>
+		</div>
+		<div class="about_wrapper2">
+			<div id="about_love">
+				<div class="about_close">
+					<a class="btn_a" href="#close" title="close">
+						<div class="btn_icon" id="love_close"></div>
+					</a>
+				</div>
+				<div id="love_display">
+					<div id="love_display_cell">
+						<div id="love_display_cell_slide">
+							<div class="cell_animate">
+								<div class="cell_img" id="ic1" style="margin: 0";>
+									<img id="im0" src="img/love/gameofthrones.png" />
+								</div>
+							</div>
+							<div class="cell_animate">
+								<div class="cell_img" id="ic2">
+									<img id="im1" src="img/love/android.png" />
+								</div>
+							</div>
+							<div class="cell_animate">
+								<div class="cell_img" id="ic3">
+									<img id="im2" src="img/love/inception.png" />
+								</div>
+							</div>
+							<div class="cell_animate">
+								<div class="cell_img" id="ic4">
+									<img id="im3" src="img/love/studioghibli.png" />
+								</div>
+							</div>
+							<div class="cell_animate">
+								<div class="cell_img" id="ic5">
+									<img id="im4" src="img/love/travel.png" />
+								</div>
+							</div>
+							<div class="cell_animate">
+								<div class="cell_img" id="ic6">
+									<img id="im5" src="img/love/seafood.png" />
+								</div>
+							</div>
+							<div class="cell_animate">
+								<div class="cell_img" id="ic7">
+									<img id="im6" src="img/love/bigbangtheory.png" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="love_ment">WHAT I LOVE</div>
+				<div id="love_switch">
+					<a class="btn_a" onclick="fncMove(-1)" title="back">
+						<div class="btn_icon" id="switch_back"></div>
+					</a> <a class="btn_a" onclick='fncMove(1)' title="next">
+						<div class="btn_icon" id="switch_next"></div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="about_wrapper3">
+			<div id="about_core">
+				<div class="about_close">
+					<a class="btn_a" href="#close" title="close">
+						<div class="btn_icon" id="core_close"></div>
+					</a>
+				</div>
+				<div id="core_img"></div>
+				<div id="core_ment">
+					<h1>INFO</h1>
+					<p>
+						저는 배우는 것에 대한 열정이 있으며,요즘같은 디지털 시대에<br> 삶을 디자인 하는 것이 매우 중요한
+						코드라고 생각하는 사람입니다.<br> <br> 대한민국 서울에 거주하고 있으며 <br>
+						현재는 컴퓨터 프로그래밍을 배우고 있습니다.<br> <br> 대학에서 사회복지를 전공하였으며 액티비한
+						활동을 좋아합니다.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="about_wrapper4">
+			<div id="about_work">
+				<div class="about_close">
+					<a class="btn_a" href="#close" title="close">
+						<div class="btn_icon" id="work_close"></div>
+					</a>
+				</div>
+				<div id="work_img">
+					<img src="img/hand1.png" id="img_work" />
+				</div>
+				<div id="work_ment">
+					<div id="ment_title">FOCUS</div>
+					<div id="work_ment_content">고도의 집중을 통해 업무효율성을 극대화 하고 불필요한 근로를
+						발생시키지 않습니다.</div>
+				</div>
+				<div id="love_switch">
+					<a class="btn_a" onclick="workMove(-1)" title="back">
+						<div class="btn_icon" id="switch_back"></div>
+					</a> <a class="btn_a" onclick='workMove(1)' title="next">
+						<div class="btn_icon" id="switch_next"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+	</div>
+</body>
+</html>
